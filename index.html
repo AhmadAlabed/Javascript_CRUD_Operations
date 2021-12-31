@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-6">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmarker</title>
+    <!-- BootStrap Style -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Main Style -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-dark text-light">
+    <header>
+        <div class="container border-bottom border-bottom-1 border-light d-flex align-items-center justify-content-between">
+            <h1 class="py-2">Bookmarker</h1>
+            <div class="d-flex flex-column align-items-center">
+                <p id="darkLightMode" class="h6">Dark Mode</p>
+                <div onclick="darkLight();" id="parent-btn" class="parent-button rounded-pill shadow-sm">
+                    <div id="child-btn" class="child-button rounded-circle shadow-sm"></div>
+                </div>
+            </div>
+            
+        </div>
+    </header>
+    
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 offset-lg-3  col-md-8 offset-md-2">
+                <div class="py-5">
+                    <h1 class="text-center">Bookmark your favorite sites</h1>
+                    <div>
+                        <label for="productName" class="form-label my-3">Site Name</label>
+                        <input type="text" onkeyup="validation('bookmarkName');" class="form-control" id="bookmarkName" placeholder="Bookmark Name">
+                        <div class="invalid-feedback">Site Name can only use letters, numbers, underscore, and hyphen, also must be 3 to 20 characters.</div>
+                        <div class="valid-feedback">Looks good!</div>
+                    </div>
+                    
+                    <div>
+                        <label for="productPrice" class="form-label my-3">Site URL</label>
+                        <input type="text" onkeyup="validation('websiteURL');" class="form-control" id="websiteURL" placeholder="website URL">
+                        <div class="invalid-feedback">Invalid URL</div>
+                    </div>
+                    
+                    <button type="button" onclick="addUpadteWebsite();" class="btn btn-outline-info mt-3 me-md-2 " id="addupdate">Add Website</button>
+                    <button type="button" onclick="showCancelModel();" class="btn btn-outline-info mt-3 ms-md-2" id="cancel">Cancel</button>
+                </div>
+
+            </div>
+        </div>
+
+        
+
+
+        <div class="w-100 py-5">
+            <input type="text" onkeyup="displayWebsites(this.value)" class="form-control bg-dark text-light mb-1" id="searchSiteName" placeholder="Search for Site Names">
+            <table class="table table-hover table-dark" id="tableid">
+            <tbody id="table-body" >
+                    <!-- ------------- -->
+            </tbody>
+            </table>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="container border-top border-top-1 border-light">
+            <p class="py-2">© 2021 Bookmarker Inc. Powered by <span class="text-muted"><a href="https://github.com/AhmadAlabed" class="link-info" target="_blank">Ahmad Alabed</a></span></p>
+        </div>
+    </footer>
+  
+    <!-- BootStrap Script -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- Main Script -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
